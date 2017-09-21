@@ -84,7 +84,7 @@ class BaseImageGenerator(object):
     def find_base_image(self, repo, tag):
         logging.debug("Searching for base image with repo %s, tag %s" % (repo, tag))
         repo_tag = DockerFile.format_image_name(repo, tag)
-        self.docker_client.pull(repo)
+        self.docker_client.pull(repo, tag)
         logging.debug(self.docker_client.images())
         candidate_image = [x for x in self.docker_client.images() if repo_tag in x['RepoTags']]
         if len(candidate_image) == 1:
