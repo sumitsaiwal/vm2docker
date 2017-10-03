@@ -17,7 +17,8 @@ class FilesystemDiffTool(object):
 
     def __exit__(self, exc_type, exc_val, exc_tb):
         if not self.debug:
-            rm_rf(self.sbx_dir)
+            #rm_rf(self.sbx_dir)
+            print('hello')
         return False
 
     def __init__(self, from_root, to_root, sandbox_dir=None, debug=False):
