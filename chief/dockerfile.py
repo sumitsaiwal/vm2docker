@@ -66,7 +66,8 @@ class DockerBuild(object):
         return self
 
     def __exit__(self, exc_type, exc_val, exc_tb):
-        rm_rf(self.dir)
+        #rm_rf(self.dir)
+        print('hello')
         return False
 
     @classmethod
