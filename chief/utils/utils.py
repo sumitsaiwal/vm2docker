@@ -50,7 +50,8 @@ def rm_rf(path):
     if os.path.isdir(path):
         shutil.rmtree(path)
     else:
-        os.remove(path)
+        #os.remove(path)
+        print('Commented the Deletion Part')
 
 
 def inheritors(klass):
