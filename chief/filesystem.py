@@ -199,7 +199,8 @@ class BaseImageGenerator(object):
     def clean_up(self):
         # delete the temporary directory
         if not self.debug:
-            rm_rf(self.temp_dir)
+            #rm_rf(self.temp_dir)
+            print('hello')
     #
     # def generate_statistics(self, new_vm_root, base_image_root):
     #     thinned_vm_size = recursive_size(new_vm_root)
